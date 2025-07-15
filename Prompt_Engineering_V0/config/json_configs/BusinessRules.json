@@ -1,0 +1,228 @@
+[
+  {
+    "Field": "task",
+    "PromptType": ["Instruction-Based", "Skeleton-of-Thought", "Active-Prompt"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Task must be a non-empty string."
+  },
+  {
+    "Field": "text",
+    "PromptType": ["Summary", "System 2 Attention Prompting"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Text must be a non-empty string."
+  },
+  {
+    "Field": "word_count",
+    "PromptType": ["Summary"],
+    "Rule": "is_integer && value > 0",
+    "ErrorMessage": "Word count must be a positive integer."
+  },
+  {
+    "Field": "problem",
+    "PromptType": ["Chain-of-Thought", "Chain-of-Code"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Problem must be a non-empty string."
+  },
+  {
+    "Field": "question",
+    "PromptType": ["Zero-Shot", "Self-Consistency", "Retrieval Augmented Generation (RAG)"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Question must be a non-empty string."
+  },
+  {
+    "Field": "input",
+    "PromptType": ["Few-Shot", "Contrastive Chain-of-Thought"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Input must be a non-empty string."
+  },
+  {
+    "Field": "examples",
+    "PromptType": ["Few-Shot"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Examples must be a non-empty string."
+  },
+  {
+    "Field": "puzzle",
+    "PromptType": ["Tree-of-Thoughts"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Puzzle must be a non-empty string."
+  },
+  {
+    "Field": "topic",
+    "PromptType": ["Graph-of-Thought", "Research-Challenges"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Topic must be a non-empty string."
+  },
+  {
+    "Field": "argument",
+    "PromptType": ["Chain-of-Verification"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Argument must be a non-empty string."
+  },
+  {
+    "Field": "situation",
+    "PromptType": ["ReAct"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Situation must be a non-empty string."
+  },
+  {
+    "Field": "complex_task",
+    "PromptType": ["Recursive Prompting"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Complex task must be a non-empty string."
+  },
+  {
+    "Field": "goal",
+    "PromptType": ["Automatic Prompt Engineer (APE)"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Goal must be a non-empty string."
+  },
+  {
+    "Field": "tool_task",
+    "PromptType": ["Automatic Reasoning and Tool-use (ART)"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Tool task must be a non-empty string."
+  },
+  {
+    "Field": "document",
+    "PromptType": ["Chain-of-Note"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Document must be a non-empty string."
+  },
+  {
+    "Field": "factual_query",
+    "PromptType": ["Chain-of-Knowledge"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Factual query must be a non-empty string."
+  },
+  {
+    "Field": "spatial_task",
+    "PromptType": ["Chain-of-Symbol"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Spatial task must be a non-empty string."
+  },
+  {
+    "Field": "program_task",
+    "PromptType": ["Structured Chain-of-Thought"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Program task must be a non-empty string."
+  },
+  {
+    "Field": "logic_problem",
+    "PromptType": ["Logical Chain-of-Thought"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Logic problem must be a non-empty string."
+  },
+  {
+    "Field": "emotion_query",
+    "PromptType": ["Emotion Prompting"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Emotion query must be a non-empty string."
+  },
+  {
+    "Field": "dataset_description",
+    "PromptType": ["Data Quality"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Dataset description must be a non-empty string."
+  },
+  {
+    "Field": "process_description",
+    "PromptType": ["Self-Healing"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Process description must be a non-empty string."
+  },
+  {
+    "Field": "source_language",
+    "PromptType": ["Code Conversion"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Source language must be a non-empty string."
+  },
+  {
+    "Field": "target_language",
+    "PromptType": ["Code Conversion"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Target language must be a non-empty string."
+  },
+  {
+    "Field": "code",
+    "PromptType": ["Code Conversion"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Code must be a non-empty string."
+  },
+  {
+    "Field": "target_table",
+    "PromptType": ["Data-Mapping"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Target table must be a non-empty string."
+  },
+  {
+    "Field": "target_column",
+    "PromptType": ["Data-Mapping"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Target column must be a non-empty string."
+  },
+  {
+    "Field": "data_type",
+    "PromptType": ["Data-Mapping"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Data type must be a non-empty string."
+  },
+  {
+    "Field": "business_meaning",
+    "PromptType": ["Data-Mapping"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Business meaning must be a non-empty string."
+  },
+  {
+    "Field": "source_columns_block",
+    "PromptType": ["Data-Mapping"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Source columns block must be a non-empty string."
+  },
+  {
+    "Field": "response",
+    "PromptType": ["Instruction Prompting and Tuning"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Response must be a non-empty string."
+  },
+  {
+    "Field": "rfp_description",
+    "PromptType": ["Presales"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "RFP description must be a non-empty string describing the sales task."
+  },
+  {
+    "Field": "hr_task",
+    "PromptType": ["HR Operations"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "HR task must be a non-empty string describing the HR activity."
+  },
+  {
+    "Field": "learning_topic",
+    "PromptType": ["Learning and Knowledge"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Learning topic must be a non-empty string specifying the training subject."
+  },
+  {
+    "Field": "financial_task",
+    "PromptType": ["Finance"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Financial task must be a non-empty string describing the financial analysis."
+  },
+  {
+    "Field": "project_task",
+    "PromptType": ["Project Management"],
+    "Rule": "is_string && not_empty",
+    "ErrorMessage": "Project task must be a non-empty string describing the project activity."
+  },
+  {
+    "Field": "domain",
+    "PromptType": [
+      "Instruction-Based", "Summary", "Data-Mapping", "Instruction Prompting and Tuning",
+      "Data Quality", "Self-Healing", "Code Conversion", "Presales", "HR Operations",
+      "Learning and Knowledge", "Finance", "Project Management"
+    ],
+    "Rule": "is_string && value in ['General', 'Banking', 'Healthcare', 'Finance', 'Retail', 'Manufacturing', 'Education', 'Government']",
+    "ErrorMessage": "Domain must be one of: General, Banking, Healthcare, Finance, Retail, Manufacturing, Education, Government."
+  }
+]

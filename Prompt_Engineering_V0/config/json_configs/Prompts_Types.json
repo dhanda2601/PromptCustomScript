@@ -1,0 +1,346 @@
+{
+  "Instruction-Based": {
+    "template": "Perform the following task in the {domain} domain: {task}",
+    "input_variables": [
+      "domain",
+      "task"
+    ],
+    "description": "Describe a smartwatch with health tracking features",
+    "help_tip": "Use for general tasks in domains like Banking or Healthcare (e.g., 'Explain AI in Banking').",
+    "last_updated": "2025-05-16"
+  },
+  "Summary": {
+    "template": "Summarize the following text in the {domain} domain: {text} in {word_count} words.",
+    "input_variables": [
+      "domain",
+      "text",
+      "word_count"
+    ],
+    "description": "Generate a summary of the provided text, tailored to a specific domain",
+    "help_tip": "Ideal for condensing articles or reports in domains like Finance (e.g., summarize a financial report).",
+    "last_updated": "2025-05-16"
+  },
+  "Data-Mapping": {
+    "template": "You are a data mapping expert in the {domain} domain. Analyze this target column and suggest source mappings:\nTarget: {target_table}.{target_column} (Type: {data_type} | Meaning: {business_meaning})\nSource Options:\n{source_columns_block}\n\nReturn a JSON array with objects containing:\n- source_table (string)\n- source_column (string)\n- confidence (float, 0.0 to 1.0)\n- reason (string explanation)",
+    "input_variables": [
+      "domain",
+      "target_table",
+      "target_column",
+      "data_type",
+      "business_meaning",
+      "source_columns_block"
+    ],
+    "description": "Map target columns to source columns with confidence scores and reasons, tailored to a domain",
+    "help_tip": "Use for data integration in domains like Healthcare (e.g., mapping patient data columns).",
+    "last_updated": "2025-05-16"
+  },
+  "Instruction Prompting and Tuning": {
+    "template": "Tune the following response in the {domain} domain: {response}\nReturn the tuned response.",
+    "input_variables": [
+      "domain",
+      "response"
+    ],
+    "description": "Refine a response based on specific instructions, tailored to a domain",
+    "help_tip": "Use to improve LLM outputs (e.g., refine a Banking chatbot response).",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Thought": {
+    "template": "Solve the problem step-by-step: {problem}\nProvide a JSON array of reasoning steps and the final answer.",
+    "input_variables": [
+      "problem"
+    ],
+    "description": "Solve problems with step-by-step reasoning in a structured JSON format",
+    "help_tip": "Use for problems requiring detailed reasoning (e.g., math or logic puzzles).",
+    "last_updated": "2025-05-16"
+  },
+  "Zero-Shot": {
+    "template": "Answer the following question: {question}\nReturn a concise response.",
+    "input_variables": [
+      "question"
+    ],
+    "description": "Answer questions without prior examples",
+    "help_tip": "Best for direct questions without training data (e.g., 'What is AI?').",
+    "last_updated": "2025-05-16"
+  },
+  "Few-Shot": {
+    "template": "Given examples, classify the following input: {input}\nExamples: {examples}",
+    "input_variables": [
+      "input",
+      "examples"
+    ],
+    "description": "Classify inputs based on provided examples",
+    "help_tip": "Use for classification tasks with examples (e.g., sentiment analysis with sample texts).",
+    "last_updated": "2025-05-16"
+  },
+  "Self-Consistency": {
+    "template": "Provide multiple reasoning paths and the best answer: {question}\nReturn a JSON object with paths and final answer.",
+    "input_variables": [
+      "question"
+    ],
+    "description": "Generate multiple reasoning paths for consistency",
+    "help_tip": "Use to ensure robust answers by exploring multiple approaches (e.g., complex questions).",
+    "last_updated": "2025-05-16"
+  },
+  "Tree-of-Thoughts": {
+    "template": "Explore options using tree-like reasoning for: {puzzle}\nReturn a JSON object with branches and conclusion.",
+    "input_variables": [
+      "puzzle"
+    ],
+    "description": "Explore multiple reasoning paths in a tree structure",
+    "help_tip": "Ideal for puzzles or decisions with multiple possibilities (e.g., strategic planning).",
+    "last_updated": "2025-05-16"
+  },
+  "Graph-of-Thought": {
+    "template": "Connect concepts related to: {topic}\nReturn a JSON object with nodes and connections.",
+    "input_variables": [
+      "topic"
+    ],
+    "description": "Map relationships between concepts in a graph structure",
+    "help_tip": "Use for conceptual analysis (e.g., mapping AI-related concepts).",
+    "last_updated": "2025-05-16"
+  },
+  "Skeleton-of-Thought": {
+    "template": "Outline your reasoning steps to solve: {task}\nReturn a JSON array of steps.",
+    "input_variables": [
+      "task"
+    ],
+    "description": "Provide a high-level outline of reasoning steps",
+    "help_tip": "Use for planning or outlining solutions (e.g., project planning steps).",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Verification": {
+    "template": "Verify each step logically for: {argument}\nReturn a JSON array of verification steps.",
+    "input_variables": [
+      "argument"
+    ],
+    "description": "Logically verify each step of an argument",
+    "help_tip": "Use to validate arguments or claims (e.g., fact-checking a statement).",
+    "last_updated": "2025-05-16"
+  },
+  "ReAct": {
+    "template": "React to the input and decide next action: {situation}\nReturn a JSON object with reaction and action.",
+    "input_variables": [
+      "situation"
+    ],
+    "description": "React to a situation and propose the next action",
+    "help_tip": "Use for decision-making in dynamic scenarios (e.g., responding to a system alert).",
+    "last_updated": "2025-05-16"
+  },
+  "Active-Prompt": {
+    "template": "Ask the user for clarification on: {task}\nReturn a clarification question.",
+    "input_variables": [
+      "task"
+    ],
+    "description": "Generate a question to clarify the user\u00e2\u20ac\u2122s task",
+    "help_tip": "Use when task details are unclear (e.g., 'What specific AI topic?').",
+    "last_updated": "2025-05-16"
+  },
+  "Recursive Prompting": {
+    "template": "Build a sequence of prompts to solve: {complex_task}\nReturn a JSON array of prompts.",
+    "input_variables": [
+      "complex_task"
+    ],
+    "description": "Create a sequence of prompts for complex tasks",
+    "help_tip": "Use for multi-step problems (e.g., breaking down a research project).",
+    "last_updated": "2025-05-16"
+  },
+  "Automatic Prompt Engineer (APE)": {
+    "template": "Suggest the best prompting strategy for: {goal}\nReturn a JSON object with strategy and explanation.",
+    "input_variables": [
+      "goal"
+    ],
+    "description": "Propose an optimal prompting strategy for a goal",
+    "help_tip": "Use to optimize prompt design (e.g., 'Best strategy for summarizing text').",
+    "last_updated": "2025-05-16"
+  },
+  "Automatic Reasoning and Tool-use (ART)": {
+    "template": "Use tools to solve this: {tool_task}\nReturn a JSON object with tool usage and result.",
+    "input_variables": [
+      "tool_task"
+    ],
+    "description": "Solve tasks using external tools",
+    "help_tip": "Use for tasks requiring tools (e.g., querying a database).",
+    "last_updated": "2025-05-16"
+  },
+  "Retrieval Augmented Generation (RAG)": {
+    "template": "Retrieve facts and answer this: {question}\nReturn a fact-based response.",
+    "input_variables": [
+      "question"
+    ],
+    "description": "Answer questions using retrieved facts",
+    "help_tip": "Use for fact-based answers (e.g., 'What are the latest AI trends?').",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Note": {
+    "template": "Create notes from: {document}\nReturn a JSON array of notes.",
+    "input_variables": [
+      "document"
+    ],
+    "description": "Generate structured notes from a document",
+    "help_tip": "Use for summarizing documents (e.g., meeting minutes).",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Knowledge": {
+    "template": "Incorporate knowledge and answer: {factual_query}\nReturn a knowledge-based response.",
+    "input_variables": [
+      "factual_query"
+    ],
+    "description": "Answer queries using incorporated knowledge",
+    "help_tip": "Use for knowledge-intensive queries (e.g., 'Explain quantum computing').",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Code": {
+    "template": "Write and run code to solve: {problem}\nReturn a JSON object with code and output.",
+    "input_variables": [
+      "problem"
+    ],
+    "description": "Solve problems by generating and running code",
+    "help_tip": "Use for coding tasks (e.g., 'Write a Python function').",
+    "last_updated": "2025-05-16"
+  },
+  "Chain-of-Symbol": {
+    "template": "Navigate the symbolic space to: {spatial_task}\nReturn a JSON object with navigation steps.",
+    "input_variables": [
+      "spatial_task"
+    ],
+    "description": "Solve spatial tasks using symbolic reasoning",
+    "help_tip": "Use for spatial problems (e.g., pathfinding algorithms).",
+    "last_updated": "2025-05-16"
+  },
+  "Structured Chain-of-Thought": {
+    "template": "Use structured steps to solve: {program_task}\nReturn a JSON array of structured steps.",
+    "input_variables": [
+      "program_task"
+    ],
+    "description": "Solve programming tasks with structured reasoning",
+    "help_tip": "Use for structured coding problems (e.g., algorithm design).",
+    "last_updated": "2025-05-16"
+  },
+  "Contrastive Chain-of-Thought": {
+    "template": "Show valid/invalid examples to reason: {input}\nReturn a JSON object with reasoning and conclusion.",
+    "input_variables": [
+      "input"
+    ],
+    "description": "Reason using valid and invalid examples",
+    "help_tip": "Use for reasoning with examples (e.g., evaluating hypotheses).",
+    "last_updated": "2025-05-16"
+  },
+  "Logical Chain-of-Thought": {
+    "template": "Apply logical reasoning to: {logic_problem}\nReturn a JSON array of logical steps.",
+    "input_variables": [
+      "logic_problem"
+    ],
+    "description": "Solve problems using formal logical reasoning",
+    "help_tip": "Use for formal logic problems (e.g., syllogisms).",
+    "last_updated": "2025-05-16"
+  },
+  "System 2 Attention Prompting": {
+    "template": "Refocus and extract main points from: {text}\nReturn a JSON array of key points.",
+    "input_variables": [
+      "text"
+    ],
+    "description": "Extract main points by refocusing attention",
+    "help_tip": "Use for extracting key ideas (e.g., from complex texts).",
+    "last_updated": "2025-05-16"
+  },
+  "Emotion Prompting": {
+    "template": "Add emotional intelligence and respond to: {emotion_query}\nReturn an empathetic response.",
+    "input_variables": [
+      "emotion_query"
+    ],
+    "description": "Respond with emotional intelligence",
+    "help_tip": "Use for empathetic responses (e.g., customer support queries).",
+    "last_updated": "2025-05-16"
+  },
+  "Research-Challenges": {
+    "template": "List the key research challenges for: {topic}\nReturn a JSON array of challenges with brief explanations.",
+    "input_variables": [
+      "topic"
+    ],
+    "description": "Identify and explain research challenges in a given field",
+    "help_tip": "Use for academic or industry research (e.g., 'AI research challenges').",
+    "last_updated": "2025-05-16"
+  },
+  "Data Quality": {
+    "template": "Analyze the dataset for quality issues in the {domain} domain: {dataset_description}\nReturn a JSON array of identified issues and suggested fixes.",
+    "input_variables": [
+      "domain",
+      "dataset_description"
+    ],
+    "description": "Analyze and improve dataset quality, tailored to a domain",
+    "help_tip": "Use to identify data issues in domains like Banking (e.g., missing values in financial data).",
+    "last_updated": "2025-05-16"
+  },
+  "Self-Healing": {
+    "template": "Detect and propose fixes for errors in the {domain} domain: {process_description}\nReturn a JSON object with errors and corrective actions.",
+    "input_variables": [
+      "domain",
+      "process_description"
+    ],
+    "description": "Detect and fix errors in data or processes, tailored to a domain",
+    "help_tip": "Use for automated error correction in domains like Healthcare (e.g., fixing pipeline failures).",
+    "last_updated": "2025-05-16"
+  },
+  "Code Conversion": {
+    "template": "Convert the following code from {source_language} to {target_language} in the {domain} domain: {code}\nReturn a JSON object with converted code and explanation.",
+    "input_variables": [
+      "domain",
+      "source_language",
+      "target_language",
+      "code"
+    ],
+    "description": "Convert code between programming languages, tailored to a domain",
+    "help_tip": "Use to translate code in domains like Finance (e.g., Python to Java for banking apps).",
+    "last_updated": "2025-05-16"
+  },
+  "Presales": {
+    "template": "Generate a response for a presales task in the {domain} domain: {rfp_description}\nReturn a JSON object with the response and key points.",
+    "input_variables": [
+      "domain",
+      "rfp_description"
+    ],
+    "description": "Generate responses for presales tasks like RFPs, tailored to a domain",
+    "help_tip": "Use for sales pitches or RFPs in domains like Banking (e.g., proposal for a banking solution).",
+    "last_updated": "2025-05-16"
+  },
+  "HR Operations": {
+    "template": "Perform the HR task in the {domain} domain: {hr_task}\nReturn a JSON object with the output and explanation.",
+    "input_variables": [
+      "domain",
+      "hr_task"
+    ],
+    "description": "Handle HR tasks like job descriptions or evaluations, tailored to a domain",
+    "help_tip": "Use for HR tasks in domains like Healthcare (e.g., creating a nurse job description).",
+    "last_updated": "2025-05-16"
+  },
+  "Learning and Knowledge": {
+    "template": "Create training material or knowledge base content in the {domain} domain: {learning_topic}\nReturn a JSON array of content sections.",
+    "input_variables": [
+      "domain",
+      "learning_topic"
+    ],
+    "description": "Generate training materials or knowledge bases, tailored to a domain",
+    "help_tip": "Use for training content in domains like Finance (e.g., financial literacy modules).",
+    "last_updated": "2025-05-16"
+  },
+  "Finance": {
+    "template": "Perform the financial task in the {domain} domain: {financial_task}\nReturn a JSON object with analysis and recommendations.",
+    "input_variables": [
+      "domain",
+      "financial_task"
+    ],
+    "description": "Perform financial analysis or budgeting tasks, tailored to a domain",
+    "help_tip": "Use for financial tasks in domains like Banking (e.g., budget analysis for a bank).",
+    "last_updated": "2025-05-16"
+  },
+  "Project Management": {
+    "template": "Support the project management task in the {domain} domain: {project_task}\nReturn a JSON object with plan and risks.",
+    "input_variables": [
+      "domain",
+      "project_task"
+    ],
+    "description": "Support project planning or risk assessment, tailored to a domain",
+    "help_tip": "Use for project tasks in domains like Healthcare (e.g., planning a hospital IT project).",
+    "last_updated": "2025-05-16"
+  }
+}

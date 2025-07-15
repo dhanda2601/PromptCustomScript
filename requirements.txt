@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+torch
+transformers
+langchain
+langchain-core
+chromadb
+plotly
+scikit-learn
+google-cloud-storage
+sentence-transformers
+llama-cpp-python
